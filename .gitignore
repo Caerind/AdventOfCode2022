@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+
+*.pdb
+.vs/
+x64/
+AdventOfCode/x64/
