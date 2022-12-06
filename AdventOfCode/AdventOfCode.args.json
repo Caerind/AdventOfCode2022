@@ -8,11 +8,11 @@
     },
     {
       "Id": "b0635a26-3991-4d4a-82e2-737b18aaae29",
-      "Command": "-test1 2"
+      "Command": "-test1 7"
     },
     {
       "Id": "ee44e9a5-fafd-4175-9ae3-820bf3ca505e",
-      "Command": "-test2 4"
+      "Command": "-test2 19"
     }
   ]
 }
