@@ -8,14 +8,14 @@ int day4part1(std::ifstream& file)
     while (std::getline(file, line))
     {
         std::string firstInput, secondInput, thirdInput, fourthInput;
-        Split(line, firstInput, "-");
-        Split(line, secondInput, ",");
-        Split(line, thirdInput, "-");
+		String::Split(line, firstInput, "-");
+		String::Split(line, secondInput, ",");
+		String::Split(line, thirdInput, "-");
         fourthInput = line;
-        int a = FromString<int>(firstInput);
-        int b = FromString<int>(secondInput);
-        int c = FromString<int>(thirdInput);
-        int d = FromString<int>(fourthInput);
+        int a = String::FromString<int>(firstInput);
+        int b = String::FromString<int>(secondInput);
+        int c = String::FromString<int>(thirdInput);
+        int d = String::FromString<int>(fourthInput);
 
         if (a <= c && d <= b) // cd is contained in ab
 		{
@@ -38,14 +38,14 @@ int day4part2(std::ifstream& file)
 	while (std::getline(file, line))
 	{
 		std::string firstInput, secondInput, thirdInput, fourthInput;
-		Split(line, firstInput, "-");
-		Split(line, secondInput, ",");
-		Split(line, thirdInput, "-");
+		String::Split(line, firstInput, "-");
+		String::Split(line, secondInput, ",");
+		String::Split(line, thirdInput, "-");
 		fourthInput = line;
-		int a = FromString<int>(firstInput);
-		int b = FromString<int>(secondInput);
-		int c = FromString<int>(thirdInput);
-		int d = FromString<int>(fourthInput);
+		int a = String::FromString<int>(firstInput);
+		int b = String::FromString<int>(secondInput);
+		int c = String::FromString<int>(thirdInput);
+		int d = String::FromString<int>(fourthInput);
 
 		if ((a <= c && b >= c) || (a <= d && b >= d)) // cd is overlapping ab
 		{

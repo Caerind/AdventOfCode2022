@@ -16,7 +16,7 @@ int day1part1(std::ifstream& file)
         }
         else
         {
-            current += FromString<int>(line);
+            current += String::FromString<int>(line);
         }
     }
 
@@ -57,7 +57,7 @@ int day1part2(std::ifstream& file)
         }
         else
         {
-            current += FromString<int>(line);
+            current += String::FromString<int>(line);
         }
     }
     endOfBatch();

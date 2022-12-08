@@ -17,22 +17,22 @@ int main(int argc, char** argv)
     {
         if (strcmp(argv[i], "-day") == 0 && i + 1 < argc)
         {
-            day = FromString<int>(argv[i + 1]);
+            day = String::FromString<int>(argv[i + 1]);
         }
         else if (strcmp(argv[i], "-test1") == 0 && i + 1 < argc)
         {
             hasTest1Value = true;
-            test1Value = FromString<int>(argv[i + 1]);
+            test1Value = String::FromString<int>(argv[i + 1]);
         }
         else if (strcmp(argv[i], "-test2") == 0 && i + 1 < argc)
         {
             hasTest2Value = true;
-            test2Value = FromString<int>(argv[i + 1]);
+            test2Value = String::FromString<int>(argv[i + 1]);
         }
     }
 
-    std::string filePath = StringFormat("day%d.data", day);
-    std::string testFilePath = StringFormat("day%d-test.data", day);
+    std::string filePath = String::StringFormat("day%d.data", day);
+    std::string testFilePath = String::StringFormat("day%d-test.data", day);
 
     std::cout << "-------------------" << std::endl;
     std::cout << "Day: " << day << std::endl;

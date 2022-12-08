@@ -29,7 +29,7 @@ bool parse(std::ifstream& file, std::vector<Directory>& dir)
     std::string line;
     while (std::getline(file, line))
     {
-        if (Contains(line, "$ cd"))
+        if (String::Contains(line, "$ cd"))
         {
             if (line == "$ cd /")
             {
@@ -52,13 +52,13 @@ bool parse(std::ifstream& file, std::vector<Directory>& dir)
                 }
             }
         }
-        else if (Contains(line, "$ ls"))
+        else if (String::Contains(line, "$ ls"))
         {
             // Do nothing
         }
         else
         {
-            if (Contains(line, "dir "))
+            if (String::Contains(line, "dir "))
             {
                 dir.push_back(Directory());
                 dir.back().name = line.substr(4);
@@ -68,8 +68,8 @@ bool parse(std::ifstream& file, std::vector<Directory>& dir)
             else
             {
                 std::string sizeStr;
-                Split(line, sizeStr, ' ');
-                dir[indexCurrent].filesSize += FromString<int>(sizeStr);
+                String::Split(line, sizeStr, ' ');
+                dir[indexCurrent].filesSize += String::FromString<int>(sizeStr);
             }
         }
     }

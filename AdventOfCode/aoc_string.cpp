@@ -1,5 +1,8 @@
 #include "aoc_string.h"
 
+namespace String
+{
+
 void LTrim(std::string& s)
 {
     s.erase(s.begin(), std::find_if(s.begin(), s.end(), [](int ch)
@@ -143,3 +146,5 @@ bool FromBoolString(const std::string& string)
 {
     return (string == "true") ? true : false;
 }
+
+} // namespace String

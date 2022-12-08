@@ -2,6 +2,9 @@
 
 #include "aoc.h"
 
+namespace String
+{
+
 void LTrim(std::string& s);
 void RTrim(std::string& s);
 void Trim(std::string& s);
@@ -91,3 +94,5 @@ inline char FromString<char>(const std::string& string)
 {
     return (string.size() >= 1) ? string[0] : '\0';
 }
+
+} // namespace String

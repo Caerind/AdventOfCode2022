@@ -49,12 +49,12 @@ int day5part1(std::ifstream& file)
             // Read instruction
             std::string countStr, indexStr, destStr;
             line.erase(line.begin(), line.begin() + 5);
-            Split(line, countStr, " from ");
-            Split(line, indexStr, " to ");
+			String::Split(line, countStr, " from ");
+			String::Split(line, indexStr, " to ");
             destStr = line;
-            int count = FromString<int>(countStr);
-            int index = FromString<int>(indexStr) - 1;
-            int dest = FromString<int>(destStr) - 1;
+            int count = String::FromString<int>(countStr);
+            int index = String::FromString<int>(indexStr) - 1;
+            int dest = String::FromString<int>(destStr) - 1;
 
             for (int i = 0; i < count; ++i)
             {
@@ -125,12 +125,12 @@ int day5part2(std::ifstream& file)
 			// Read instruction
 			std::string countStr, indexStr, destStr;
 			line.erase(line.begin(), line.begin() + 5);
-			Split(line, countStr, " from ");
-			Split(line, indexStr, " to ");
+			String::Split(line, countStr, " from ");
+			String::Split(line, indexStr, " to ");
 			destStr = line;
-			int count = FromString<int>(countStr);
-			int index = FromString<int>(indexStr) - 1;
-			int dest = FromString<int>(destStr) - 1;
+			int count = String::FromString<int>(countStr);
+			int index = String::FromString<int>(indexStr) - 1;
+			int dest = String::FromString<int>(destStr) - 1;
 
 			for (int i = 0; i < count; ++i)
 			{
