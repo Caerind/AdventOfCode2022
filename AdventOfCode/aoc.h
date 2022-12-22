@@ -15,6 +15,12 @@
 #include <cctype>
 
 #include "aoc_string.h"
+#include "Math.hpp"
+#include "Vector2.hpp"
+#include "Vector3.hpp"
+#include "Vector4.hpp"
+#include "Matrix3.hpp"
+#include "Matrix4.hpp"
 
 int day1part1(std::ifstream& file);
 int day1part2(std::ifstream& file);
